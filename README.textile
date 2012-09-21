@@ -1,1 +1,29 @@
-A Command Line tool for HTML Pre-Processing, especially for UI prototyping
+h2. What is HPP?
+
+HPP stands for 'HTML Pre-Processing', is a command line tool for HTML Pre-Processing, especially for UI prototyping.
+
+h2. How to Use It?
+
+To install the tool, simply run
+
+bq. @gem install npp@
+
+Then go to the directory where the original HTML file folder sits, e.g.
+
+project
+|_src
+  |_x.html
+
+Invoke the command under project directory, just like bellow
+
+bq. @project> npp process src target@
+
+h2. Command Options
+
+npp process [source folder] [target folder]
+
+* If [source folder] not specified, the 'src' folder will be assumed by default. If there doesn't exist the expected [source folder], RuntimeError will be raised.
+
+* If [target folder] not specified, the 'target' folder will be assumed by default. If there doesn't exist the expected [target folder], the folder will be created.
+
+h2. MIT Licence
