@@ -14,3 +14,8 @@ desc 'uninstall gem locally'
 task :uninstall do
   systemu %q(gem uninstall hpp -x)
 end
+
+desc 'publish gem to rubygems.org'
+task :publish do
+  systemu %q(gem push hpp-0.1.0.gem)
+end
