@@ -1,18 +1,16 @@
-require 'rubygems'
-require 'rubygems/package_task'
-require ''
+require 'systemu'
 
-Gem::PackageTask.new(specification) do |package|
-  package.need_zip = true
-  package.need_tar = true
+desc 'build gem'
+task :gem do
+  systemu %q(gem build hpp.gemspec)
 end
 
 desc 'install gem locally'
 task :install => :gem do
-  `gem install pkg/hpp-0.1.gem`
+  systemu %q(gem install hpp-0.1.0.gem)
 end
 
 desc 'uninstall gem locally'
 task :uninstall do
-  `gem uninstall hpp -x`
+  systemu %q(gem uninstall hpp -x)
 end

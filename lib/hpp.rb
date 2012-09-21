@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-require "rubygems"
 require "thor"
 
 class Hpp < Thor
@@ -28,5 +26,3 @@ class Hpp < Thor
     end
   end
 end
-
-Hpp.start
