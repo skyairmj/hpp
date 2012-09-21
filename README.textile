@@ -1,1 +1,1 @@
-A tool for HTML UI Prototype
+A Command Line tool for HTML Pre-Processing, especially for UI prototyping
