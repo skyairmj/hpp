@@ -14,15 +14,45 @@ bq. @gem install hpp@
 
 h3. Usage
 
-Go to the directory where the original HTML file folder sits, e.g.
+Go to the directory where the original HTML file folder sits.
 
+<pre>
 project
-|_src
-  |_x.html
+ |-src
+   |-x.html
+   |-_y.html
+   |-css
+     |-main.css
+   |-js
+     |-site.js
+</pre>
 
-Invoke the command under project directory, just like bellow
+Assume x.html includes _y.html, such as the directive <!--#include file='_y.html'-->
+
+Invoking the command under project directory, just like bellow
 
 bq. @project> hpp process src target@
+
+It will create another folder 'target', and 'tree target' will return:
+
+<pre>
+project
+ |-src
+   |-x.html
+   |-_y.html
+   |-css
+     |-main.css
+   |-js
+     |-site.js
+ |-target
+   |-x.html
+   |-css
+     |-main.css
+   |-js
+     |-site.js
+</pre>
+
+Note: the content of _y.html will be included into x.html at the place where the above <include> directive is.
 
 h2. Command Options
 
@@ -32,4 +62,7 @@ hpp process [source folder] [target folder]
 
 * If [target folder] not specified, the 'target' folder will be assumed by default. If there doesn't exist the expected [target folder], the folder will be created.
 
-h2. MIT Licence
+
+h2. License
+
+h3. MIT License

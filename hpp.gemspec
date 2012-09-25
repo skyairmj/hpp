@@ -1,7 +1,7 @@
 Gem::Specification.new do |gem|
   gem.name = "hpp"
   gem.summary = "A Command Line tool for HTML Pre-Processing"
-  gem.version = "0.1.0"
+  gem.version = "0.1.1"
   gem.authors = ["Ming Jin"]
   gem.email =  ["skyairmj@gmail.com"]
   gem.homepage = "https://github.com/mingjin/hpp"
