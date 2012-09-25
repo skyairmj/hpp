@@ -4,11 +4,17 @@ HPP stands for 'HTML Pre-Processing', is a command line tool for HTML Pre-Proces
 
 h2. How to Use It?
 
-To install the tool, simply run
+h3. Requirements
 
-bq. @gem install npp@
+Ruby 1.9.3-p194
 
-Then go to the directory where the original HTML file folder sits, e.g.
+h3. Installation
+
+bq. @gem install hpp@
+
+h3. Usage
+
+Go to the directory where the original HTML file folder sits, e.g.
 
 project
 |_src
@@ -16,11 +22,11 @@ project
 
 Invoke the command under project directory, just like bellow
 
-bq. @project> npp process src target@
+bq. @project> hpp process src target@
 
 h2. Command Options
 
-npp process [source folder] [target folder]
+hpp process [source folder] [target folder]
 
 * If [source folder] not specified, the 'src' folder will be assumed by default. If there doesn't exist the expected [source folder], RuntimeError will be raised.
 
