@@ -1,14 +1,16 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    listen (0.5.3)
     rake (0.9.2.2)
-    systemu (2.5.2)
+    rb-fsevent (0.9.2)
     thor (0.16.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  listen
   rake
-  systemu
+  rb-fsevent
   thor

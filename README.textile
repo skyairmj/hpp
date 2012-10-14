@@ -56,12 +56,13 @@ Note: the content of _y.html will be included into x.html at the place where the
 
 h2. Command Options
 
-hpp process [source folder] [target folder]
+hpp process [source folder] [target folder] [--daemon]
 
 * If [source folder] not specified, the 'src' folder will be assumed by default. If there doesn't exist the expected [source folder], RuntimeError will be raised.
 
 * If [target folder] not specified, the 'target' folder will be assumed by default. If there doesn't exist the expected [target folder], the folder will be created.
 
+* If [--daemon] specified, it will invoke a process listening to the changes in [source folder], and process the whole [source folder] immediately once the changes detected, so that you don't need to invoke the command again and again. This is available since version 0.1.2
 
 h2. License
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 require "rubygems"
-require 'hpp'
+require 'hpp/hpp'
 
-Hpp.start
+Hpp::Hpp.start
