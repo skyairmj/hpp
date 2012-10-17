@@ -20,3 +20,11 @@ desc 'publish gem to rubygems.org'
 task :publish do
   system "gem push hpp-#{Hpp::VERSION}.gem"
 end
+
+desc 'release hpp with git tagging & rubygems publishment'
+task :release do
+  system "git tag v#{Hpp::Version}"
+  system "git push origin master"
+  system "git push origin v#{Hpp::Version}"
+  system "gem push hpp-#{Hpp::Version}.gem"
+end
